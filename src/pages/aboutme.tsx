@@ -1,4 +1,3 @@
-import React from "react";
 import profilepicture from "../assets/profilePic.jpg";
 import Timeline from "../components/Timeline";
 

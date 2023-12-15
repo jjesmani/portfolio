@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Default from "../components/Layouts/Default";
 import { FaReact, FaGithub, FaNodeJs, FaFigma } from "react-icons/fa";
 import {
   SiTypescript,
@@ -13,6 +12,7 @@ import Timeline from "../components/Timeline";
 import earthbump from "../assets/earthbump.jpg";
 import earthcloud from "../assets/earthCloud.png";
 import earthmap from "../assets/earthmap1k.jpg";
+import Icons from "../components/Icons";
 
 const Home = () => {
   const animationContainerRef = useRef<HTMLDivElement>(null);
@@ -86,7 +86,7 @@ const Home = () => {
   return (
     <>
       <div
-        ref={animationContainerRef}
+        // ref={animationContainerRef}
         className="text-center flex items-center justify-center h-80"
       ></div>
       <div className="text-center my-8">
@@ -107,60 +107,60 @@ const Home = () => {
       <div className="border border-zinc-200 rounded px-4.5 py-4 my-8 text-center text-xl font-bold">
         My go-to toolbelt
         <div className="flex flex-row flex-wrap items-center justify-center my-8 text-zinc-500 gap-5">
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:rotate-360 hover:text-react-color transition-all duration-500 ease-in-out text-zinc-500">
-              <FaReact />
-            </div>
-            React
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:text-typescript-color transition-all duration-500 ease-in-out text-zinc-500">
-              <SiTypescript />
-            </div>
-            Typescript
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:rotate-360 hover:text-react-color transition-all duration-500 ease-in-out text-zinc-500">
-              <SiTailwindcss />
-            </div>
-            TailwindCSS
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:text-orange-500 transition-all duration-500 ease-in-out text-zinc-500">
-              <SiAwsamplify />
-            </div>
-            Amplify
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:text-github-color transition-all duration-500 ease-in-out text-zinc-500">
-              <FaGithub />
-            </div>
-            GitHub
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:text-github-color transition-all duration-500 ease-in-out text-zinc-500">
-              <SiNextdotjs />
-            </div>
-            Next.js
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:text-github-color transition-all duration-500 ease-in-out text-zinc-500">
-              <SiExpress />
-            </div>
-            Express.js
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:text-nodejs-color transition-all duration-500 ease-in-out text-zinc-500">
-              <FaNodeJs />
-            </div>
-            Node.js
-          </div>
-          <div className="flex flex-col text-center items-center w-[10ch] gap-4 hover:text-zinc-800 transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center text-5xl mb-3 hover:scale-125 hover:text-github-color transition-all duration-500 ease-in-out text-zinc-500">
-              <FaFigma />
-            </div>
-            Figma
-          </div>
+          <Icons
+            icon={FaReact}
+            text="React"
+            hoverColor="hover:text-react-color"
+            animationType="hover:scale-125 hover:rotate-360"
+          />
+          <Icons
+            icon={SiTypescript}
+            text="Typescript"
+            hoverColor="hover:text-typescript-color"
+            animationType="hover:scale-125"
+          />
+          <Icons
+            icon={SiTailwindcss}
+            text="Tailwindcss"
+            hoverColor="hover:text-react-color"
+            animationType="hover:scale-125 hover:rotate-360"
+          />
+          <Icons
+            icon={SiAwsamplify}
+            text="Amplify"
+            hoverColor="hover:text-orange-500"
+            animationType="hover:scale-125"
+          />
+          <Icons
+            icon={FaGithub}
+            text="GitHub"
+            hoverColor="hover:text-github-color"
+            animationType="hover:scale-125"
+          />
+          <Icons
+            icon={SiNextdotjs}
+            text="Next.js"
+            hoverColor="hover:text-github-color"
+            animationType="hover:scale-125"
+          />
+          <Icons
+            icon={SiExpress}
+            text="Express.js"
+            hoverColor="hover:text-github-color"
+            animationType="hover:scale-125"
+          />
+          <Icons
+            icon={FaNodeJs}
+            text="Node.js"
+            hoverColor="hover:text-nodejs-color"
+            animationType="hover:scale-125"
+          />
+          <Icons
+            icon={FaFigma}
+            text="Figma"
+            hoverColor="hover:text-github-color"
+            animationType="hover:scale-125"
+          />
         </div>
       </div>
       <div>
