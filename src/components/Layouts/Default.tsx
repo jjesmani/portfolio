@@ -1,4 +1,4 @@
-import { HTMLAttributes, useState } from "react";
+import { useState } from "react";
 import Navbar from "./Navbar";
 import { HiMenuAlt2 } from "react-icons/hi";
 
