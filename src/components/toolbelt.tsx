@@ -10,6 +10,11 @@ import {
 	SiAwsamplify,
 	SiAmazonaws,
 	SiDocker,
+	SiPytorch,
+	SiPython,
+	SiAppstore,
+	SiAndroid,
+	SiGraphql,
 } from "react-icons/si";
 
 import { TbBrandDjango } from "react-icons/tb";
@@ -174,6 +179,56 @@ const tools: Tool[] = [
 		acquiredAt: new Date(2020, 7 - 1),
 		className: "data-[tool=docker]:hover:text-[#0db7ed]",
 	},
+	{
+		id: "pytorch",
+		title: "Pytorch",
+		icon: <SiPytorch />,
+		category: "backend",
+		brandColor: "#00000000",
+		status: Status.ACQUIRED,
+		acquiredAt: new Date(2024, 2 - 1),
+		className: "data-[tool=pytorch]:hover:text-[#F05F42]",
+	},
+	{
+		id: "python",
+		title: "Python",
+		icon: <SiPython />,
+		category: "backend",
+		brandColor: "#00000000",
+		status: Status.ACQUIRED,
+		acquiredAt: new Date(2024, 2 - 1),
+		className: "data-[tool=python]:hover:text-[#4584b6]",
+	},
+	{
+		id: "ios",
+		title: "ios",
+		icon: <SiAppstore />,
+		category: "others",
+		brandColor: "#00000000",
+		status: Status.ACQUIRED,
+		acquiredAt: new Date(2024, 2 - 1),
+		className: "data-[tool=ios]:hover:text-[#0470b9]",
+	},
+	{
+		id: "android",
+		title: "android",
+		icon: <SiAndroid />,
+		category: "others",
+		brandColor: "#00000000",
+		status: Status.ACQUIRED,
+		acquiredAt: new Date(2024, 2 - 1),
+		className: "data-[tool=android]:hover:text-[#3DDC84]",
+	},
+	{
+		id: "graphql",
+		title: "graphql",
+		icon: <SiGraphql />,
+		category: "others",
+		brandColor: "#00000000",
+		status: Status.ACQUIRED,
+		acquiredAt: new Date(2024, 2 - 1),
+		className: "data-[tool=graphql]:hover:text-[#e535ab]",
+	},
 ];
 
 type Stack =
@@ -235,7 +290,10 @@ export const getToolbelt: GetToolbelt = (props) => {
 			]);
 			break;
 		case "backend":
-			Array.prototype.push.apply(toBeFiltered, ["django rest"]);
+			Array.prototype.push.apply(toBeFiltered, [
+				"django rest",
+				"graphql",
+			]);
 			break;
 		case "styling":
 			Array.prototype.push.apply(toBeFiltered, [
@@ -250,6 +308,9 @@ export const getToolbelt: GetToolbelt = (props) => {
 				"AWS Amplify",
 				"AWS",
 				"docker",
+				"ios",
+				"android",
+				"pytorch",
 			]);
 			break;
 		case "portfolio":

@@ -20,6 +20,7 @@ const career = [
 			"aws",
 			"Tailwind CSS",
 			"Github",
+			"docker",
 		].map((item) => getTool(item)),
 	},
 	{
