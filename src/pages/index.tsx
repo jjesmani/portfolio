@@ -8,7 +8,7 @@ import {
 } from "react-icons/si";
 import { TbBrandDjango } from "react-icons/tb";
 import Timeline from "../components/timeline";
-import Icons from "../components/Icons";
+import Icons from "../components/icons";
 import { useLottie } from "lottie-react";
 
 const Home = () => {
