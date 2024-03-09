@@ -39,7 +39,7 @@ const Career: React.FC = ({}) => {
 							<p>{item.description}</p>
 							<div className="flex flex-row gap-4 flex-wrap justify-center sm:justify-start">
 								{item.stacks.map(
-									(stack, index) =>
+									(stack) =>
 										stack && (
 											<div
 												key={stack.title}
